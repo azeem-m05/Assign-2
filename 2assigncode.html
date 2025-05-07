@@ -3,55 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Image Map Example</title>
-    <link rel="icon" href="icon.jpg" type="favicon/jpg">
-    <link rel="stylesheet" href="gball.css">
-    <link rel="stylesheet" href="gshoe.css">
-    <link rel="stylesheet" href="gloves.css">
+    <link rel="icon" href="icon.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #5eb3bd;
             padding: 40px;
-            color: lab(2.19% 0 0);
+            color: #000;
             text-align: center;
         }
+
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
-            background-color: #d8dd47f3;
+            background-color: #f0f8ff;
             padding: 30px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.573);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             border-radius: 12px;
         }
-        .container h1 {
-            font-size: 36px;
+
+        h1, h2, h3 {
             color: #0b4986;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-        .container p {
+
+        p, li {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin: 10px 0;
         }
-        .container img {
+
+        img {
             width: 100%;
             height: auto;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-        .container img:hover {
+
+        img:hover {
             transform: scale(1.01);
             cursor: pointer;
+        }
+
+        ul, ol {
+            text-align: left;
+            margin-left: 50px;
+        }
+
+        .list-section, .table-section, .cr7-section {
+            background-color: #ffffffd2;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        pre {
+            text-align: left;
+            font-size: 17px;
+            background-color: #e7e7e7;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .cr7-img {
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 style="text-align: center;">WELCOME TO IMAGE MAP</h1>
+        <h1>WELCOME TO IMAGE MAP</h1>
         <p>Click on the items in the image for more info</p>
 
         <img src="2.jpg" alt="Trophies" usemap="#imgmap">
@@ -60,9 +107,94 @@
             <area shape="rect" coords="6,2,363,733" href="gloves.html" alt="gloves">
             <area shape="rect" coords="368,4,734,366" href="shoe.html" alt="gshoe">
             <area shape="rect" coords="372,370,731,732" href="gball.html" alt="gball">
-        </map>
+        </map> 
 
-        
+        <div class="list-section">
+            <h2>HTML Lists</h2>
+            <h3>Unordered List</h3>
+            <ul>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>MongoDB</li>
+            </ul>
+
+            <h3>Ordered List</h3>
+            <ol>
+                <li>HTML</li>
+                <li>JavaScript</li>
+                <li>MongoDB</li>
+            </ol>
+
+            <h2>Programming Languages</h2>
+            <ul>
+              <li>Frontend</li>
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </li>
+              <li>Backend
+                <ul>
+                  <li>Python</li>
+                  <li>Node.js</li>
+                  <li>PHP</li>
+                </ul>
+              </li>
+            </ul>
+        </div>
+
+        <div class="table-section">
+            <h2>HTML Table</h2>
+            <table>
+                <tr>
+                    <th>Page</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Home</td>
+                    <td>Main welcome page</td>
+                </tr>
+                <tr>
+                    <td>Page-1</td>
+                    <td>This is a clickable Image of Cristiano Ronaldo, for more details click on the image</td>
+                </tr>
+                <tr>
+                    <td>Page-2</td>
+                    <td>Main picture</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--pic1.html -picture 1info Page-->
+
+        <div class="cr7-section">
+            <h2>Picture 1: Cristiano Ronaldo</h2>
+            <img src="cr-7.jpeg" alt="Cristiano Ronaldo" class="cr7-img">
+
+            <pre>
+Name      - Cristiano Ronaldo dos Santos Aveiro
+Country   - Portugal (Madeira)
+Nickname  - CR-7, Ronnie, The GOAT
+Position  - Forward (Left)
+
+Awards    - 5× Ballon d'Or (2008, 2013, 2014, 2016, 2017)
+            4× European Golden Shoes
+            3× UEFA Best Player in Europe
+            FIFA Puskás Award – 2009
+            Most International Goals – 128+
+            Most UCL Goals – 140+
+            Most UCL Hat-tricks – 8 (tied with Messi)
+            800+ career goals (club + country)
+
+Clubs     - Sporting CP
+            Manchester United
+            Real Madrid
+            Juventus
+            Al-Nassr
+            </pre>
+        </div>
     </div>
+
 </body>
 </html>
