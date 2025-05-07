@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Map Example</title>
+    <link rel="icon" href="icon.jpg" type="favicon/jpg">
+    <link rel="stylesheet" href="gball.css">
+    <link rel="stylesheet" href="gshoe.css">
+    <link rel="stylesheet" href="gloves.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #5eb3bd;
+            padding: 40px;
+            color: lab(2.19% 0 0);
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #d8dd47f3;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.573);
+            border-radius: 12px;
+        }
+        .container h1 {
+            font-size: 36px;
+            color: #0b4986;
+            margin-bottom: 20px;
+        }
+        .container p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .container img:hover {
+            transform: scale(1.01);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">WELCOME TO IMAGE MAP</h1>
+        <p>Click on the items in the image for more info</p>
+
+        <img src="2.jpg" alt="Trophies" usemap="#imgmap">
+
+        <map name="imgmap">
+            <area shape="rect" coords="6,2,363,733" href="gloves.html" alt="gloves">
+            <area shape="rect" coords="368,4,734,366" href="shoe.html" alt="gshoe">
+            <area shape="rect" coords="372,370,731,732" href="gball.html" alt="gball">
+        </map>
+
+        
+    </div>
+</body>
+</html>
